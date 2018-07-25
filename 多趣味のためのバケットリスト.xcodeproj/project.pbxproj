@@ -15,8 +15,10 @@
 		7176FBF82108565A0024B2D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7176FBF62108565A0024B2D5 /* LaunchScreen.storyboard */; };
 		7176FC032108565B0024B2D5 /* _______________Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FC022108565B0024B2D5 /* _______________Tests.swift */; };
 		7176FC0E2108565B0024B2D5 /* _______________UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FC0D2108565B0024B2D5 /* _______________UITests.swift */; };
+		7176FC1C210861E60024B2D5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FC1B210861E60024B2D5 /* ListViewController.swift */; };
+		7176FC1E21089BB30024B2D5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7176FC1D21089BB30024B2D5 /* Realm.framework */; };
+		7176FC2021089BB70024B2D5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7176FC1F21089BB70024B2D5 /* RealmSwift.framework */; };
 		8542E71BD108F4DA4ACB8566 /* Pods________________Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E41FE74C26A25767F6D487 /* Pods________________Tests.framework */; };
-		A698E1D35D0271DD0B4960D3 /* Pods________________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EA1448BB4256C877CC6735 /* Pods________________.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,7 @@
 /* Begin PBXFileReference section */
 		0F0C5E5304B89828E6476B9E /* Pods-多趣味のためのバケットリストUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリストUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリストUITests/Pods-多趣味のためのバケットリストUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		189431C866DBE656680648DC /* Pods-多趣味のためのバケットリスト.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリスト.debug.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリスト/Pods-多趣味のためのバケットリスト.debug.xcconfig"; sourceTree = "<group>"; };
-		21EA1448BB4256C877CC6735 /* Pods________________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods________________.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21EA1448BB4256C877CC6735 /* Pods________________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7176FBEA210856590024B2D5 /* 多趣味のためのバケットリスト.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "多趣味のためのバケットリスト.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7176FBED210856590024B2D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7176FBEF210856590024B2D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,17 +50,20 @@
 		7176FBF72108565A0024B2D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7176FBF92108565A0024B2D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7176FBFE2108565A0024B2D5 /* 多趣味のためのバケットリストTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "多趣味のためのバケットリストTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7176FC022108565B0024B2D5 /* _______________Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _______________Tests.swift; sourceTree = "<group>"; };
+		7176FC022108565B0024B2D5 /* _______________Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_______________Tests.swift"; sourceTree = "<group>"; };
 		7176FC042108565B0024B2D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7176FC092108565B0024B2D5 /* 多趣味のためのバケットリストUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "多趣味のためのバケットリストUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7176FC0D2108565B0024B2D5 /* _______________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _______________UITests.swift; sourceTree = "<group>"; };
+		7176FC0D2108565B0024B2D5 /* _______________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_______________UITests.swift"; sourceTree = "<group>"; };
 		7176FC0F2108565B0024B2D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7176FC1B210861E60024B2D5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		7176FC1D21089BB30024B2D5 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7176FC1F21089BB70024B2D5 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9674BA3CF63E1597A5E4162B /* Pods-多趣味のためのバケットリスト.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリスト.release.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリスト/Pods-多趣味のためのバケットリスト.release.xcconfig"; sourceTree = "<group>"; };
 		96924F20944877BBFEAB6FD8 /* Pods-多趣味のためのバケットリストTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリストTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリストTests/Pods-多趣味のためのバケットリストTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBCF5252B75A9844569C9CB /* Pods-多趣味のためのバケットリストTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリストTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリストTests/Pods-多趣味のためのバケットリストTests.release.xcconfig"; sourceTree = "<group>"; };
-		CBDE71152883E45E64866D3C /* Pods________________UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods________________UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDE71152883E45E64866D3C /* Pods________________UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________________UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71CACF7B02B108688BC4122 /* Pods-多趣味のためのバケットリストUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリストUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリストUITests/Pods-多趣味のためのバケットリストUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E7E41FE74C26A25767F6D487 /* Pods________________Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods________________Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E41FE74C26A25767F6D487 /* Pods________________Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________________Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A698E1D35D0271DD0B4960D3 /* Pods________________.framework in Frameworks */,
+				7176FC2021089BB70024B2D5 /* RealmSwift.framework in Frameworks */,
+				7176FC1E21089BB30024B2D5 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +111,8 @@
 		4D669A5A9A05A2416C4BB806 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7176FC1F21089BB70024B2D5 /* RealmSwift.framework */,
+				7176FC1D21089BB30024B2D5 /* Realm.framework */,
 				21EA1448BB4256C877CC6735 /* Pods________________.framework */,
 				E7E41FE74C26A25767F6D487 /* Pods________________Tests.framework */,
 				CBDE71152883E45E64866D3C /* Pods________________UITests.framework */,
@@ -139,6 +147,7 @@
 			children = (
 				7176FBED210856590024B2D5 /* AppDelegate.swift */,
 				7176FBEF210856590024B2D5 /* ViewController.swift */,
+				7176FC1B210861E60024B2D5 /* ListViewController.swift */,
 				7176FBF1210856590024B2D5 /* Main.storyboard */,
 				7176FBF42108565A0024B2D5 /* Assets.xcassets */,
 				7176FBF62108565A0024B2D5 /* LaunchScreen.storyboard */,
@@ -379,6 +388,7 @@
 			files = (
 				7176FBF0210856590024B2D5 /* ViewController.swift in Sources */,
 				7176FBEE210856590024B2D5 /* AppDelegate.swift in Sources */,
+				7176FC1C210861E60024B2D5 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
