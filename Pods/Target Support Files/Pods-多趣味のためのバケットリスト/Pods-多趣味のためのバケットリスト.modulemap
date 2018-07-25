@@ -1,0 +1,6 @@
+framework module Pods________________ {
+  umbrella header "Pods-多趣味のためのバケットリスト-umbrella.h"
+
+  export *
+  module * { export * }
+}
