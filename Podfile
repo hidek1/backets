@@ -6,6 +6,7 @@ target '多趣味のためのバケットリスト' do
   use_frameworks!
 
   # Pods for 多趣味のためのバケットリスト
+  pod 'Hue'
   pod 'RealmSwift'
   post_install do |installer|
   installer.pods_project.targets.each do |target|
