@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double HueVersionNumber;
-FOUNDATION_EXPORT const unsigned char HueVersionString[];
+FOUNDATION_EXPORT double SwiftReorderVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftReorderVersionString[];
 
