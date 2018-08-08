@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5F47C049B155034E8CD2195F /* Pods________________UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDE71152883E45E64866D3C /* Pods________________UITests.framework */; };
+		714747202119AB48000F0A79 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 714747222119AB48000F0A79 /* Localizable.strings */; };
+		714747252119AF8E000F0A79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 714747242119AF8E000F0A79 /* GoogleService-Info.plist */; };
+		714747292119B00D000F0A79 /* Pods_多趣味のためのハ_ケットリスト.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714747282119B00D000F0A79 /* Pods_多趣味のためのハ_ケットリスト.framework */; };
 		7176FBEE210856590024B2D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FBED210856590024B2D5 /* AppDelegate.swift */; };
 		7176FBF0210856590024B2D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FBEF210856590024B2D5 /* ViewController.swift */; };
 		7176FBF3210856590024B2D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7176FBF1210856590024B2D5 /* Main.storyboard */; };
@@ -24,6 +27,8 @@
 		7176FC2C2109BCAD0024B2D5 /* バケツ鉛筆.png in Resources */ = {isa = PBXBuildFile; fileRef = 7176FC2B2109BCAD0024B2D5 /* バケツ鉛筆.png */; };
 		7176FC2E2109CC330024B2D5 /* MBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7176FC2D2109CC330024B2D5 /* MBViewController.swift */; };
 		7176FC30210A15E60024B2D5 /* バケ2hobby.png in Resources */ = {isa = PBXBuildFile; fileRef = 7176FC2F210A15E60024B2D5 /* バケ2hobby.png */; };
+		71C7F70A210ED31800799D15 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7F709210ED31800799D15 /* InfoViewController.swift */; };
+		71C7F70C210F33F700799D15 /* SwiftReorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C7F70B210F33F700799D15 /* SwiftReorder.framework */; };
 		8542E71BD108F4DA4ACB8566 /* Pods________________Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E41FE74C26A25767F6D487 /* Pods________________Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,11 @@
 		0F0C5E5304B89828E6476B9E /* Pods-多趣味のためのバケットリストUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリストUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリストUITests/Pods-多趣味のためのバケットリストUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		189431C866DBE656680648DC /* Pods-多趣味のためのバケットリスト.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリスト.debug.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリスト/Pods-多趣味のためのバケットリスト.debug.xcconfig"; sourceTree = "<group>"; };
 		21EA1448BB4256C877CC6735 /* Pods________________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		714747212119AB48000F0A79 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		714747232119AB4E000F0A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		714747242119AF8E000F0A79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		714747262119AFD7000F0A79 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		714747282119B00D000F0A79 /* Pods_多趣味のためのハ_ケットリスト.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = "Pods_多趣味のためのハ_ケットリスト.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7176FBEA210856590024B2D5 /* 多趣味のためのバケットリスト.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "多趣味のためのバケットリスト.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7176FBED210856590024B2D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7176FBEF210856590024B2D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +82,10 @@
 		7176FC2B2109BCAD0024B2D5 /* バケツ鉛筆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "バケツ鉛筆.png"; sourceTree = "<group>"; };
 		7176FC2D2109CC330024B2D5 /* MBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBViewController.swift; sourceTree = "<group>"; };
 		7176FC2F210A15E60024B2D5 /* バケ2hobby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "バケ2hobby.png"; sourceTree = "<group>"; };
+		71C7F709210ED31800799D15 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		71C7F70B210F33F700799D15 /* SwiftReorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftReorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E4B9C92119A18500831571 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		71E4B9CA2119A18500831571 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9674BA3CF63E1597A5E4162B /* Pods-多趣味のためのバケットリスト.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリスト.release.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリスト/Pods-多趣味のためのバケットリスト.release.xcconfig"; sourceTree = "<group>"; };
 		96924F20944877BBFEAB6FD8 /* Pods-多趣味のためのバケットリストTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリストTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリストTests/Pods-多趣味のためのバケットリストTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBCF5252B75A9844569C9CB /* Pods-多趣味のためのバケットリストTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-多趣味のためのバケットリストTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-多趣味のためのバケットリストTests/Pods-多趣味のためのバケットリストTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714747292119B00D000F0A79 /* Pods_多趣味のためのハ_ケットリスト.framework in Frameworks */,
+				71C7F70C210F33F700799D15 /* SwiftReorder.framework in Frameworks */,
 				7176FC2021089BB70024B2D5 /* RealmSwift.framework in Frameworks */,
 				7176FC1E21089BB30024B2D5 /* Realm.framework in Frameworks */,
 			);
@@ -125,6 +141,9 @@
 		4D669A5A9A05A2416C4BB806 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				714747282119B00D000F0A79 /* Pods_多趣味のためのハ_ケットリスト.framework */,
+				714747262119AFD7000F0A79 /* FirebaseCore.framework */,
+				71C7F70B210F33F700799D15 /* SwiftReorder.framework */,
 				7176FC292109731B0024B2D5 /* SwiftReorder.framework */,
 				7176FC2121089D820024B2D5 /* Hue.framework */,
 				7176FC1F21089BB70024B2D5 /* RealmSwift.framework */,
@@ -139,6 +158,7 @@
 		7176FBE1210856590024B2D5 = {
 			isa = PBXGroup;
 			children = (
+				714747222119AB48000F0A79 /* Localizable.strings */,
 				7176FBEC210856590024B2D5 /* 多趣味のためのバケットリスト */,
 				7176FC012108565B0024B2D5 /* 多趣味のためのバケットリストTests */,
 				7176FC0C2108565B0024B2D5 /* 多趣味のためのバケットリストUITests */,
@@ -163,6 +183,7 @@
 			children = (
 				7176FBED210856590024B2D5 /* AppDelegate.swift */,
 				7176FBEF210856590024B2D5 /* ViewController.swift */,
+				71C7F709210ED31800799D15 /* InfoViewController.swift */,
 				7176FC1B210861E60024B2D5 /* ListViewController.swift */,
 				7176FBF1210856590024B2D5 /* Main.storyboard */,
 				7176FC2D2109CC330024B2D5 /* MBViewController.swift */,
@@ -173,6 +194,7 @@
 				7176FC2B2109BCAD0024B2D5 /* バケツ鉛筆.png */,
 				7176FBF42108565A0024B2D5 /* Assets.xcassets */,
 				7176FBF62108565A0024B2D5 /* LaunchScreen.storyboard */,
+				714747242119AF8E000F0A79 /* GoogleService-Info.plist */,
 				7176FBF92108565A0024B2D5 /* Info.plist */,
 			);
 			path = "多趣味のためのバケットリスト";
@@ -286,6 +308,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 7176FBE1210856590024B2D5;
 			productRefGroup = 7176FBEB210856590024B2D5 /* Products */;
@@ -305,8 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7176FBF82108565A0024B2D5 /* LaunchScreen.storyboard in Resources */,
+				714747252119AF8E000F0A79 /* GoogleService-Info.plist in Resources */,
 				7176FBF52108565A0024B2D5 /* Assets.xcassets in Resources */,
 				7176FBF3210856590024B2D5 /* Main.storyboard in Resources */,
+				714747202119AB48000F0A79 /* Localizable.strings in Resources */,
 				7176FC30210A15E60024B2D5 /* バケ2hobby.png in Resources */,
 				7176FC2621093B3D0024B2D5 /* backets.png in Resources */,
 				7176FC2C2109BCAD0024B2D5 /* バケツ鉛筆.png in Resources */,
@@ -373,15 +398,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-多趣味のためのバケットリスト/Pods-多趣味のためのバケットリスト-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftReorder/SwiftReorder.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftReorder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -416,6 +445,7 @@
 				7176FBF0210856590024B2D5 /* ViewController.swift in Sources */,
 				7176FC28210954280024B2D5 /* LaunchViewController.swift in Sources */,
 				7176FBEE210856590024B2D5 /* AppDelegate.swift in Sources */,
+				71C7F70A210ED31800799D15 /* InfoViewController.swift in Sources */,
 				7176FC1C210861E60024B2D5 /* ListViewController.swift in Sources */,
 				7176FC2421089EFB0024B2D5 /* NewViewController.swift in Sources */,
 				7176FC2E2109CC330024B2D5 /* MBViewController.swift in Sources */,
@@ -454,10 +484,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		714747222119AB48000F0A79 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				714747212119AB48000F0A79 /* ja */,
+				714747232119AB4E000F0A79 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7176FBF1210856590024B2D5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7176FBF2210856590024B2D5 /* Base */,
+				71E4B9C92119A18500831571 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -466,6 +506,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7176FBF72108565A0024B2D5 /* Base */,
+				71E4B9CA2119A18500831571 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -477,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -537,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -593,12 +636,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6L5JVQU52Y;
 				INFOPLIST_FILE = "多趣味のためのバケットリスト/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "HidePelo.---------------";
+				PRODUCT_BUNDLE_IDENTIFIER = HidePelo.Syaba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -611,12 +656,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6L5JVQU52Y;
 				INFOPLIST_FILE = "多趣味のためのバケットリスト/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "HidePelo.---------------";
+				PRODUCT_BUNDLE_IDENTIFIER = HidePelo.Syaba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

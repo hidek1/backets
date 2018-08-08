@@ -8,18 +8,33 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
-class NewViewController: UIViewController {
+class NewViewController: UIViewController, UITextFieldDelegate ,GADBannerViewDelegate  {
     var memo: String?
     var maxId: Int { return try! Realm().objects(Hobby.self).sorted(byKeyPath: "id").last?.id ?? 0 }
+    var bannerView: GADBannerView!
+    
+    @IBOutlet weak var addCategory: UINavigationItem!
     @IBOutlet weak var TextField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-1673671818946203/6393002202"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        
+        addCategory.title = NSLocalizedString("addCategory", comment: "")
+        
         if let memo = self.memo {
             self.TextField.text = memo
             self.navigationItem.title = "Edit Memo"
         }
+        TextField.delegate = self
         self.updateSaveButtonState()
         // Do any additional setup after loading the view.
     }
@@ -62,7 +77,31 @@ class NewViewController: UIViewController {
             print("エラーだよ")
         }
     }
-    
+    func textFieldShouldReturn(_ TextField: UITextField) -> Bool{
+        // キーボードを閉じる
+        TextField.resignFirstResponder()
+        return true
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
     @IBAction func cancel(_ sender: Any) {
     self.dismiss(animated: true, completion: nil)
     }

@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backets.png" translatesAutoresizingMaskIntoConstraints="NO" id="AYA-qY-hiL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="バケツ鉛筆.png" translatesAutoresizingMaskIntoConstraints="NO" id="AYA-qY-hiL">
                                 <rect key="frame" x="97" y="228" width="180" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="1xu-gM-RnN"/>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backets.png" width="1536" height="1536"/>
+        <image name="バケツ鉛筆.png" width="800" height="800"/>
     </resources>
 </document>

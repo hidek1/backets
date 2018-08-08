@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Deadline"; ObjectID = "2k6-Ux-kHR"; */
+"2k6-Ux-kHR.text" = "Deadline";
+
+/* Class = "UILabel"; text = "~How to use~"; ObjectID = "6sb-Py-49H"; */
+"6sb-Py-49H.text" = "~How to use~";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "CVT-Uc-rs9"; */
+"CVT-Uc-rs9.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "FHQ-Ut-pKR"; */
+"FHQ-Ut-pKR.title" = "Save";
+
+/* Class = "UILabel"; text = "Notification will be shown before \rthe deadline."; ObjectID = "If4-Wv-vc5"; */
+"If4-Wv-vc5.text" = "Notification will be shown before \rthe deadline.";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Nn4-Ws-mbI"; */
+"Nn4-Ws-mbI.title" = "Cancel";
+
+/* Class = "UINavigationItem"; title = "bucket list"; ObjectID = "OzA-GU-PVq"; */
+"OzA-GU-PVq.title" = "bucket list";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "P6D-cT-w7O"; */
+"P6D-cT-w7O.title" = "Back";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Ye1-lj-bUo"; */
+"Ye1-lj-bUo.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Add category"; ObjectID = "Yzc-hF-TLa"; */
+"Yzc-hF-TLa.title" = "Add category";
+
+/* Class = "UILabel"; text = "Notification time"; ObjectID = "aHE-eD-Tyh"; */
+"aHE-eD-Tyh.text" = "Notification time";
+
+/* Class = "UILabel"; text = "If you already achieved it, you can check\r the list."; ObjectID = "bC3-sv-E1w"; */
+"bC3-sv-E1w.text" = "If you already achieved it, you can check\r the list.";
+
+/* Class = "UILabel"; text = "You can make a bucket list  in each category."; ObjectID = "dce-tU-lpn"; */
+"dce-tU-lpn.text" = "You can make a bucket list  in each category.";
+
+/* Class = "UINavigationItem"; title = "Information"; ObjectID = "fxI-aM-dXk"; */
+"fxI-aM-dXk.title" = "Information";
+
+/* Class = "UILabel"; text = "~How to delete the list~"; ObjectID = "kXu-to-Zgw"; */
+"kXu-to-Zgw.text" = "~How to delete the list~";
+
+/* Class = "UINavigationItem"; title = "Choose category"; ObjectID = "nrU-oo-1t7"; */
+"nrU-oo-1t7.title" = "Choose category";
+
+/* Class = "UILabel"; text = "You can delete the content of the list  or category by swiping left."; ObjectID = "vfK-Zt-vpz"; */
+"vfK-Zt-vpz.text" = "You can delete the content of the list  or category by swiping left.";
+
+/* Class = "UINavigationItem"; title = "Add to bucket list"; ObjectID = "ybF-lq-gCn"; */
+"ybF-lq-gCn.title" = "Add to bucket list";
+
+/* Class = "UIBarButtonItem"; title = "back"; ObjectID = "ynS-kT-tXo"; */
+"ynS-kT-tXo.title" = "back";

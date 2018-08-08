@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  多趣味のためのバケットリスト
+
+  Created by 吉永秀和 on 2018/08/07.
+  Copyright © 2018年 吉永秀和. All rights reserved.
+*/
+"tit1" = "~How to use~";
+"des1" = "You can make a bucket list  in each category.";
+"des2" = "If you already achieved it, you can check\nthe list.";
+"des3" = "Notification will be shown before\nthe deadline.";
+"tit2" = "~How to delete the list~";
+"des4" = "You can delete the content of the list\nor category by swiping left.";
+"Title" = "Title";
+"Deadline" = "Deadline";
+"Notification" = "Notification time";
+"Category" = "Category";
+"addCategory" = "Add Category";
+"A" = "Accomplish";
+"NA" = "Not Accomplish";
+"one day before" = "one day before";
+"one week before" = "one week before";
+"one month before" = "one month before";

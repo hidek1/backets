@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--趣味を選ぶ-->
+        <!--Choose category-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="多趣味のためのハ_ケットリスト" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="titleTableViewCell" id="NDz-MJ-kRf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="titleTableViewCell" id="NDz-MJ-kRf">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NDz-MJ-kRf" id="WJ9-Fe-NJa">
@@ -37,18 +37,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="YfR-lv-AKn"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xki-AW-8Wv">
+                                <rect key="frame" x="290" y="495" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="info:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0tj-4S-xbM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.30196078430000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XSF-hU-qde" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9cV-6b-hWS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XSF-hU-qde" secondAttribute="trailing" id="VFq-gH-rPc"/>
+                            <constraint firstItem="xki-AW-8Wv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-51" id="Wer-AV-gQC"/>
                             <constraint firstItem="XSF-hU-qde" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZtG-7L-1zf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XSF-hU-qde" secondAttribute="bottom" id="h7f-eV-I5u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xki-AW-8Wv" secondAttribute="trailing" constant="8" id="rzG-ER-46s"/>
                             <constraint firstItem="XSF-hU-qde" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vAA-UZ-nxd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="趣味を選ぶ" id="nrU-oo-1t7">
+                    <navigationItem key="navigationItem" title="Choose category" id="nrU-oo-1t7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IaD-kb-1vP">
                             <connections>
                                 <segue destination="i7N-4f-vnG" kind="presentation" id="wOG-nA-ae2"/>
@@ -56,15 +65,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Category" destination="nrU-oo-1t7" id="jPU-MO-lv2"/>
                         <outlet property="TableView" destination="XSF-hU-qde" id="YgM-mx-bKw"/>
                         <segue destination="5M8-iv-r9W" kind="presentation" id="618-Fv-u8L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="125.4872563718141"/>
+            <point key="canvasLocation" x="1074.375" y="124.64788732394366"/>
         </scene>
-        <!--バケットリスト-->
+        <!--bucket list-->
         <scene sceneID="0TL-7l-IdS">
             <objects>
                 <viewController storyboardIdentifier="listView" id="0Ij-g2-z70" customClass="ListViewController" customModule="多趣味のためのハ_ケットリスト" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,18 +100,27 @@
                                     <outlet property="delegate" destination="0Ij-g2-z70" id="MMB-xb-DeU"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ds0-BH-Cvd">
+                                <rect key="frame" x="290" y="495" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="info:" destination="0Ij-g2-z70" eventType="touchUpInside" id="yYJ-os-cj7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.30196078430000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="06L-EM-JVa" firstAttribute="trailing" secondItem="Ds0-BH-Cvd" secondAttribute="trailing" constant="8" id="0nz-3x-gN4"/>
                             <constraint firstItem="W26-SV-PtP" firstAttribute="top" secondItem="06L-EM-JVa" secondAttribute="top" id="GA4-rY-WG2"/>
                             <constraint firstItem="W26-SV-PtP" firstAttribute="leading" secondItem="06L-EM-JVa" secondAttribute="leading" id="Jip-gS-h9a"/>
                             <constraint firstItem="06L-EM-JVa" firstAttribute="bottom" secondItem="W26-SV-PtP" secondAttribute="bottom" id="WRu-9k-p67"/>
+                            <constraint firstItem="Ds0-BH-Cvd" firstAttribute="bottom" secondItem="06L-EM-JVa" secondAttribute="bottom" constant="-51" id="X8I-FY-fCX"/>
                             <constraint firstItem="06L-EM-JVa" firstAttribute="trailing" secondItem="W26-SV-PtP" secondAttribute="trailing" id="aKX-C7-Iwl"/>
                             <constraint firstItem="06L-EM-JVa" firstAttribute="trailing" secondItem="W26-SV-PtP" secondAttribute="trailing" id="wtC-d3-kT6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="06L-EM-JVa"/>
                     </view>
-                    <navigationItem key="navigationItem" title="バケットリスト" id="OzA-GU-PVq">
+                    <navigationItem key="navigationItem" title="bucket list" id="OzA-GU-PVq">
                         <barButtonItem key="backBarButtonItem" title="back" id="ynS-kT-tXo"/>
                         <barButtonItem key="leftBarButtonItem" title="Back" id="CVT-Uc-rs9">
                             <connections>
@@ -122,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="2922" y="41"/>
         </scene>
-        <!--バケットリストに追加-->
+        <!--Add to bucket list-->
         <scene sceneID="EDm-MI-ecL">
             <objects>
                 <viewController id="ZeZ-hA-UZU" customClass="MBViewController" customModule="多趣味のためのハ_ケットリスト" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,20 +158,20 @@
                                     <action selector="textChanged:" destination="ZeZ-hA-UZU" eventType="editingChanged" id="rpg-La-Vwh"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2k6-Ux-kHR">
-                                <rect key="frame" x="135.5" y="155" width="49" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2k6-Ux-kHR">
+                                <rect key="frame" x="114" y="170" width="92" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye1-lj-bUo">
-                                <rect key="frame" x="111" y="73" width="98" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye1-lj-bUo">
+                                <rect key="frame" x="137.5" y="73" width="45" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QVT-gy-NB0">
-                                <rect key="frame" x="0.0" y="192" width="320" height="126"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QVT-gy-NB0">
+                                <rect key="frame" x="0.0" y="207" width="320" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="MLy-l4-NKO"/>
                                     <constraint firstAttribute="height" constant="126" id="Q8S-dR-ytr"/>
@@ -161,19 +180,23 @@
                                     <!--2018-07-27 06:17:08 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知期間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHE-eD-Tyh">
-                                <rect key="frame" x="111" y="336" width="98" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHE-eD-Tyh">
+                                <rect key="frame" x="74.5" y="363" width="171" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="884-7F-lYo">
-                                <rect key="frame" x="0.0" y="391" width="320" height="131"/>
+                                <rect key="frame" x="0.0" y="395" width="320" height="131"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="S9i-DV-7vT"/>
                                     <constraint firstAttribute="height" constant="131" id="hla-gg-cJp"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZeZ-hA-UZU" id="gk8-7b-kSM"/>
+                                    <outlet property="delegate" destination="ZeZ-hA-UZU" id="GZ1-Lp-ugH"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.30196078430000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,21 +204,21 @@
                             <constraint firstItem="QVT-gy-NB0" firstAttribute="centerX" secondItem="QjC-6q-LKP" secondAttribute="centerX" id="3S2-hx-Df9"/>
                             <constraint firstItem="qrY-In-yi4" firstAttribute="leading" secondItem="lV6-YO-1B0" secondAttribute="leading" constant="30" id="4KW-R7-pc1"/>
                             <constraint firstItem="aHE-eD-Tyh" firstAttribute="centerX" secondItem="QjC-6q-LKP" secondAttribute="centerX" id="5dv-WS-Ohu"/>
-                            <constraint firstItem="2k6-Ux-kHR" firstAttribute="top" secondItem="qrY-In-yi4" secondAttribute="bottom" constant="15" id="DBR-Ly-8GH"/>
+                            <constraint firstItem="2k6-Ux-kHR" firstAttribute="top" secondItem="qrY-In-yi4" secondAttribute="bottom" constant="30" id="DBR-Ly-8GH"/>
                             <constraint firstItem="QVT-gy-NB0" firstAttribute="top" secondItem="2k6-Ux-kHR" secondAttribute="bottom" constant="8" id="GKy-8u-dAH"/>
-                            <constraint firstItem="884-7F-lYo" firstAttribute="top" secondItem="aHE-eD-Tyh" secondAttribute="bottom" constant="26" id="KBM-Wa-wbW"/>
+                            <constraint firstItem="884-7F-lYo" firstAttribute="top" secondItem="aHE-eD-Tyh" secondAttribute="bottom" constant="3" id="KBM-Wa-wbW"/>
                             <constraint firstItem="QVT-gy-NB0" firstAttribute="top" secondItem="2k6-Ux-kHR" secondAttribute="bottom" constant="8" id="XpN-x0-N8c"/>
                             <constraint firstItem="884-7F-lYo" firstAttribute="centerX" secondItem="QjC-6q-LKP" secondAttribute="centerX" id="bXn-GR-0S9"/>
                             <constraint firstItem="lV6-YO-1B0" firstAttribute="trailing" secondItem="qrY-In-yi4" secondAttribute="trailing" constant="30" id="blY-KT-A4e"/>
                             <constraint firstItem="2k6-Ux-kHR" firstAttribute="centerX" secondItem="QjC-6q-LKP" secondAttribute="centerX" id="iDW-do-z30"/>
                             <constraint firstItem="Ye1-lj-bUo" firstAttribute="centerX" secondItem="QjC-6q-LKP" secondAttribute="centerX" id="jw0-xa-FaA"/>
-                            <constraint firstItem="aHE-eD-Tyh" firstAttribute="top" secondItem="QVT-gy-NB0" secondAttribute="bottom" constant="18" id="kYL-09-4kW"/>
+                            <constraint firstItem="aHE-eD-Tyh" firstAttribute="top" secondItem="QVT-gy-NB0" secondAttribute="bottom" constant="30" id="kYL-09-4kW"/>
                             <constraint firstItem="Ye1-lj-bUo" firstAttribute="top" secondItem="lV6-YO-1B0" secondAttribute="top" constant="9" id="nRk-9E-aOb"/>
                             <constraint firstItem="qrY-In-yi4" firstAttribute="top" secondItem="Ye1-lj-bUo" secondAttribute="bottom" constant="8" id="wvI-HL-VNk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lV6-YO-1B0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="バケットリストに追加" id="ybF-lq-gCn">
+                    <navigationItem key="navigationItem" title="Add to bucket list" id="ybF-lq-gCn">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="d5m-TT-IAJ">
                             <connections>
                                 <action selector="Cancel:" destination="ZeZ-hA-UZU" id="7NQ-9K-70E"/>
@@ -208,7 +231,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="DatePicker" destination="QVT-gy-NB0" id="KLA-kh-FGM"/>
+                        <outlet property="Deadline" destination="2k6-Ux-kHR" id="SrB-oW-AfR"/>
+                        <outlet property="Notification" destination="aHE-eD-Tyh" id="0cN-sr-3mU"/>
                         <outlet property="TextField" destination="qrY-In-yi4" id="1rE-x1-uw3"/>
+                        <outlet property="fTitle" destination="Ye1-lj-bUo" id="eIe-Zj-R9P"/>
+                        <outlet property="pickerView" destination="884-7F-lYo" id="lEQ-VT-JyD"/>
                         <outlet property="saveButton" destination="hWD-De-vvJ" id="MCi-6V-ESK"/>
                     </connections>
                 </viewController>
@@ -216,7 +244,7 @@
             </objects>
             <point key="canvasLocation" x="4653.75" y="28.52112676056338"/>
         </scene>
-        <!--趣味を追加する-->
+        <!--Add category-->
         <scene sceneID="6en-g0-K9L">
             <objects>
                 <viewController id="dYf-vZ-LmD" customClass="NewViewController" customModule="多趣味のためのハ_ケットリスト" customModuleProvider="target" sceneMemberID="viewController">
@@ -251,7 +279,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kdu-4f-rI3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="趣味を追加する" id="Yzc-hF-TLa">
+                    <navigationItem key="navigationItem" title="Add category" id="Yzc-hF-TLa">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Nn4-Ws-mbI">
                             <connections>
                                 <action selector="cancel:" destination="dYf-vZ-LmD" id="wFD-ji-7hD"/>
@@ -265,12 +293,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="TextField" destination="n0O-Pv-hyD" id="PGi-iL-x5e"/>
+                        <outlet property="addCategory" destination="Yzc-hF-TLa" id="zbw-DA-ojE"/>
                         <outlet property="saveButton" destination="FHQ-Ut-pKR" id="kIF-o1-tUp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKU-20-hvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2921.739130434783" y="807.88043478260875"/>
+            <point key="canvasLocation" x="3918.75" y="807.04225352112678"/>
         </scene>
         <!--Launch View Controller-->
         <scene sceneID="VNY-1X-rbh">
@@ -280,7 +309,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backets.png" translatesAutoresizingMaskIntoConstraints="NO" id="k3w-RM-KsR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="バケツ鉛筆.png" translatesAutoresizingMaskIntoConstraints="NO" id="k3w-RM-KsR">
                                 <rect key="frame" x="70" y="179" width="180" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="Yzs-cz-fqt"/>
@@ -302,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JaN-mz-0Jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-746" y="125"/>
+            <point key="canvasLocation" x="-934" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nGu-rB-49I">
@@ -322,6 +351,99 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="125.4872563718141"/>
         </scene>
+        <!--Information-->
+        <scene sceneID="itC-Ub-A2N">
+            <objects>
+                <viewController storyboardIdentifier="info" id="8mX-IJ-7Nh" customClass="InfoViewController" customModule="多趣味のためのハ_ケットリスト" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x4F-U0-ue1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~How to use~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sb-Py-49H">
+                                <rect key="frame" x="106" y="112" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can make a bucket list  in each category." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dce-tU-lpn">
+                                <rect key="frame" x="-2.5" y="163" width="325" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfK-Zt-vpz">
+                                <rect key="frame" x="17.5" y="410" width="285" height="41"/>
+                                <string key="text" base64-UTF8="YES">
+WW91IGNhbiBkZWxldGUgdGhlIGNvbnRlbnQgb2YgdGhlIGxpc3QgERERERERERHigKhvciBjYXRlZ29y
+eSBieSBzd2lwaW5nIGxlZnQuA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC3-sv-E1w">
+                                <rect key="frame" x="13.5" y="213" width="293" height="38.5"/>
+                                <string key="text" base64-UTF8="YES">
+SWYgeW91IGFscmVhZHkgYWNoaWV2ZWQgaXQsIHlvdSBjYW4gY2hlY2sRERERERENIHRoZSBsaXN0Lg
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="If4-Wv-vc5">
+                                <rect key="frame" x="40" y="281.5" width="240.5" height="38.5"/>
+                                <string key="text" base64-UTF8="YES">
+Tm90aWZpY2F0aW9uIHdpbGwgYmUgc2hvd24gERERERERERERERERERFiZWZvcmUgERERDXRoZSBkZWFk
+bGluZS4REREREREREQ
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~How to delete the list~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXu-to-Zgw">
+                                <rect key="frame" x="68.5" y="359" width="183" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.30196078430000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="If4-Wv-vc5" firstAttribute="top" secondItem="bC3-sv-E1w" secondAttribute="bottom" constant="30" id="5Gc-k7-CAH"/>
+                            <constraint firstItem="If4-Wv-vc5" firstAttribute="centerX" secondItem="x4F-U0-ue1" secondAttribute="centerX" id="EP7-Fr-u6i"/>
+                            <constraint firstItem="kXu-to-Zgw" firstAttribute="top" secondItem="If4-Wv-vc5" secondAttribute="bottom" constant="39" id="HvX-3H-YqF"/>
+                            <constraint firstItem="6sb-Py-49H" firstAttribute="centerX" secondItem="x4F-U0-ue1" secondAttribute="centerX" id="Pzg-x3-YEc"/>
+                            <constraint firstItem="6sb-Py-49H" firstAttribute="top" secondItem="yrh-YG-4ya" secondAttribute="top" constant="48" id="Wg2-cF-su7"/>
+                            <constraint firstItem="dce-tU-lpn" firstAttribute="top" secondItem="6sb-Py-49H" secondAttribute="bottom" constant="30" id="Y3a-VB-xOp"/>
+                            <constraint firstItem="vfK-Zt-vpz" firstAttribute="centerX" secondItem="x4F-U0-ue1" secondAttribute="centerX" id="YYX-3g-Wak"/>
+                            <constraint firstItem="kXu-to-Zgw" firstAttribute="centerX" secondItem="x4F-U0-ue1" secondAttribute="centerX" id="ZQH-SS-G2W"/>
+                            <constraint firstItem="bC3-sv-E1w" firstAttribute="centerX" secondItem="x4F-U0-ue1" secondAttribute="centerX" id="ahz-sI-Hbp"/>
+                            <constraint firstItem="vfK-Zt-vpz" firstAttribute="top" secondItem="kXu-to-Zgw" secondAttribute="bottom" constant="30" id="qi6-mD-kr7"/>
+                            <constraint firstItem="bC3-sv-E1w" firstAttribute="top" secondItem="dce-tU-lpn" secondAttribute="bottom" constant="30" id="ryY-Yv-ZPs"/>
+                            <constraint firstItem="dce-tU-lpn" firstAttribute="centerX" secondItem="x4F-U0-ue1" secondAttribute="centerX" id="ySF-eB-vmb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yrh-YG-4ya"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Information" id="fxI-aM-dXk">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="P6D-cT-w7O">
+                            <connections>
+                                <action selector="Back:" destination="8mX-IJ-7Nh" id="QUV-VH-BfP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Label1" destination="6sb-Py-49H" id="Fq8-JG-wCU"/>
+                        <outlet property="Label2" destination="dce-tU-lpn" id="vOH-1f-HUF"/>
+                        <outlet property="Label3" destination="bC3-sv-E1w" id="73z-Wr-vUu"/>
+                        <outlet property="Label4" destination="If4-Wv-vc5" id="k7Y-QC-547"/>
+                        <outlet property="Label5" destination="kXu-to-Zgw" id="H2L-ep-lE3"/>
+                        <outlet property="Label6" destination="vfK-Zt-vpz" id="lR1-X9-JAq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="837-Lc-leH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965" y="959.15492957746483"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Rd-Rg-CLA">
             <objects>
@@ -338,7 +460,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pm6-Mc-xkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1984.8" y="808.24587706146929"/>
+            <point key="canvasLocation" x="2981.25" y="808.09859154929575"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xFc-sR-LnL">
@@ -377,9 +499,27 @@
             </objects>
             <point key="canvasLocation" x="3747.826086956522" y="28.532608695652176"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gfc-Hw-tmM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bZ1-7z-p9B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="buV-VH-W0y">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8mX-IJ-7Nh" kind="relationship" relationship="rootViewController" id="KH4-KK-GKS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zU-xP-K3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967.5" y="959.15492957746483"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="backets.png" width="1536" height="1536"/>
         <image name="バケ2hobby.png" width="800" height="798"/>
+        <image name="バケツ鉛筆.png" width="800" height="800"/>
     </resources>
 </document>

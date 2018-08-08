@@ -8,20 +8,30 @@
 
 import UIKit
 import RealmSwift
-
-class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+import GoogleMobileAds
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource ,GADBannerViewDelegate {
     @IBOutlet weak var TableView: UITableView!
     var lists:Results<Backet>?
 //    var receive = Hobby()
     var lt:Results<Backet>? = nil
     var Ct:Results<Backet>? = nil
-    
+    var ntDates:[Date] = []
     var twoDimArray = [Results<Backet>?]()
     var mySections = [String]()
+    var bannerView: GADBannerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-1673671818946203/6393002202"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        
         // Do any additional setup after loading the view.
-        mySections = ["未達成", "達成済み"]
+        self.title = send.name
+        mySections = [NSLocalizedString("NA", comment: ""), NSLocalizedString("A", comment: "")]
         if lt == nil && Ct == nil {
         // Realmのインスタンスを取得
         let realm = try! Realm()
@@ -45,12 +55,40 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func BackButton(_ sender: Any) {
          self.dismiss(animated: true, completion: nil)
     }
-
+    
+    
+    @IBAction func info(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let VC = storyboard.instantiateViewController(withIdentifier: "info") as! UIViewController
+        let naviVC = UINavigationController(rootViewController: VC)
+        naviVC.modalTransitionStyle = .flipHorizontal
+        self.present(naviVC, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
     //セクションの数を返す.
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,15 +106,45 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell", for: indexPath)
-        cell.textLabel?.text = twoDimArray[indexPath.section]?[indexPath.row].name
-        cell.textLabel?.textColor = .white
-        cell.backgroundColor = UIColor.clear
-        if indexPath.section == 1 {
-            cell.accessoryType = .checkmark
+        let cell = UITableViewCell.init(style: .value1, reuseIdentifier: "listTableViewCell")
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "listTableViewCell", for: indexPath)
+        if indexPath.section == 0 {
+            let limitDates = ["one day before","one week before", "one month before"]
+            if twoDimArray[indexPath.section]?[indexPath.row].nTime == limitDates[0]{
+                ntDates.append((twoDimArray[indexPath.section]?[indexPath.row].deadLine)! - 60*60*24)
+            } else if twoDimArray[indexPath.section]?[indexPath.row].nTime == limitDates[1] {
+                ntDates.append((twoDimArray[indexPath.section]?[indexPath.row].deadLine)! - 60*60*24*7)
+            } else if twoDimArray[indexPath.section]?[indexPath.row].nTime == limitDates[2] {
+                ntDates.append((twoDimArray[indexPath.section]?[indexPath.row].deadLine)! - 60*60*24*30)
+            }
+            cell.textLabel?.text = twoDimArray[indexPath.section]?[indexPath.row].name
+            let today : Date = Date()
+            print("期限", ntDates)
+            print(today)
+            if today.compare((twoDimArray[indexPath.section]?[indexPath.row].deadLine)!) == .orderedDescending  {
+                cell.textLabel?.textColor = .red
+                cell.detailTextLabel?.textColor = UIColor.red
+            } else if today.compare(ntDates[indexPath.row]) == .orderedDescending {
+                cell.textLabel?.textColor = .yellow
+                cell.detailTextLabel?.textColor = UIColor.yellow
+            } else {
+                cell.textLabel?.textColor = .white
+                cell.detailTextLabel?.textColor = UIColor.white
+            }
         } else {
-            cell.accessoryType = .none
+            cell.textLabel?.text = "✔︎ \(twoDimArray[indexPath.section]?[indexPath.row].name as! String)"
+            cell.textLabel?.textColor = .white
+            cell.detailTextLabel?.textColor = UIColor.white
         }
+        let format = DateFormatter()
+        format.dateFormat = "yyyy/MM/dd"
+        cell.detailTextLabel?.text = format.string(from: (twoDimArray[indexPath.section]?[indexPath.row].deadLine)!)
+        cell.backgroundColor = UIColor.clear
+//        if indexPath.section == 1 {
+//            cell.accessoryType = .checkmark
+//        } else {
+//            cell.accessoryType = .none
+//        }
         return cell
     }
     
@@ -112,6 +180,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             try! realm.write() {
                 realm.delete((twoDimArray[indexPath.section]?[indexPath.row])!)
             }
+            ntDates.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

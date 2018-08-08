@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 
 class Hobby: Object {
@@ -23,18 +24,32 @@ class Backet: Object {
     @objc dynamic var backetId = 0
     @objc dynamic var name = ""
     @objc dynamic var complete = false
+    @objc dynamic var deadLine = Date()
+    @objc dynamic var nTime = "one day before"
+    
     // idをプライマリキーに設定
     override static func primaryKey() -> String? {
         return "backetId"
     }
 }
 var send = Hobby()
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource ,GADBannerViewDelegate {
     var hobbys:Results<Hobby>?
+    var bannerView: GADBannerView!
     
+    @IBOutlet weak var Category: UINavigationItem!
     @IBOutlet weak var TableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Category.title = NSLocalizedString("Category", comment: "")
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-1673671818946203/6393002202"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
         // Realmのインスタンスを取得
         let realm = try! Realm()
 //               // 全てのデータを削除
@@ -67,11 +82,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "listView") as! UIViewController
         let naviVC = UINavigationController(rootViewController: nextVC)
-        // まずセグエで接続されているUINavigationControllerを取得する
-        // UINavigationControllerにぶら下がっているSecondViewControllerを取得する
-//        let second = ListViewController()
-        
-//        second.receive = send
         // ここで遷移アニメーションを指定する
         naviVC.modalTransitionStyle = .flipHorizontal
         self.present(naviVC, animated: true, completion: nil)
@@ -87,6 +97,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
+    
+    @IBAction func info(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let VC = storyboard.instantiateViewController(withIdentifier: "info") as! UIViewController
+        let naviVC = UINavigationController(rootViewController: VC)
+        naviVC.modalTransitionStyle = .flipHorizontal
+        self.present(naviVC, animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

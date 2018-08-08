@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  多趣味のためのバケットリスト
+
+  Created by 吉永秀和 on 2018/08/07.
+  Copyright © 2018年 吉永秀和. All rights reserved.
+*/
+"tit1" = "〜使い方〜";
+"des1" = "まず、仕事、遊びなどのジャンル分けができます。";
+"des2" = "達成した項目はタップするとチェックが付きます。";
+"des3" = "目標の期日の前に通知を設定することができます。";
+"tit2" = "〜リストの消し方〜";
+"des4" = "ジャンルやリストは左スワイプで削除できます。";
+"Title" = "タイトル";
+"Deadline" = "締め切り";
+"Notification" = "通知のタイミング";
+"Category" = "ジャンル";
+"addCategory" = "ジャンルを追加する";
+"A" = "達成";
+"NA" = "未達成";
+"one day before" = "1日前";
+"one week before" = "1週間前";
+"one month before" = "1ヶ月前";
